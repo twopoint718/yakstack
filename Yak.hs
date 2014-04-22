@@ -45,6 +45,6 @@ main = do
     args <- getArgs
     case args of
         ("push":xs) -> update yakStack (Push $ unwords xs)
-        ("pop" :_)   -> update yakStack Pop >>= putStrLn
+        ("pop" :_)  -> update yakStack Pop >>= putStrLn
         ("peek":_)  -> showAll
         _           -> usage
